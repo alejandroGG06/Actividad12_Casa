@@ -29,4 +29,11 @@ public class Habitacion {
 		this.tipoHabitacion = tipoHabitacion;
 	}
 
+	@Override
+	public String toString() {
+		return "Habitacion [nombre=" + nombre + ", metrosCuadrados=" + metrosCuadrados + ", tipoHabitacion="
+				+ tipoHabitacion + "]";
+	}
+	
+	
 }

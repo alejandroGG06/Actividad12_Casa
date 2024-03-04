@@ -25,7 +25,8 @@ public class Main {
 		casaAyman.setJardin(jardin1);
 		casaAyman.setPrecio(2000000);
 		casaAyman.setSegundaMano(false);
-
+		
+		System.out.println(casaAyman);
 		System.out.println("La superficie de la casa es " + casaAyman.metrosTotales() + " metros cuadrados");
 		System.out.println(casaAyman.esSegundaMano());
 		System.out.println(casaAyman.casaMasIVA());

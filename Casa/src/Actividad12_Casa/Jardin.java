@@ -20,4 +20,10 @@ public class Jardin {
 		this.numeroPlantas = numeroPlantas;
 	}
 
+	@Override
+	public String toString() {
+		return "Jardin [metrosCuadrados=" + metrosCuadrados + ", numeroPlantas=" + numeroPlantas + "]";
+	}
+	
+	
 }

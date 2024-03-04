@@ -39,4 +39,11 @@ public class Direccion {
 		this.codigoPostal = codigoPostal;
 	}
 
+	@Override
+	public String toString() {
+		return "Direccion [tipoVia=" + tipoVia + ", nombreVia=" + nombreVia + ", localidad=" + localidad
+				+ ", codigoPostal=" + codigoPostal + "]";
+	}
+	
+	
 }

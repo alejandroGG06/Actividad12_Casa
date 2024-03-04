@@ -56,6 +56,13 @@ public class Casa {
 	public void setMetros(int metros) {
 		this.metros = metros;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Casa [precio= " + precio + ", direccion=" + direccion + ", habitaciones= " + habitaciones + ", jardin= "
+				+ jardin + ", segundamano= " + segundamano + ", metros= " + metros + "]";
+	}
 
 	public int metrosTotales() {
 		return this.metros += habitaciones.metrosCuadrados + jardin.metrosCuadrados;
