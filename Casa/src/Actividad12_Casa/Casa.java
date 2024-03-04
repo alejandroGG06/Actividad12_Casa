@@ -5,7 +5,7 @@ public class Casa {
 Direccion direccion;
 Habitaciones habitaciones;
 Jardin jardin;
-String segundamano;
+boolean segundamano;
 int metros;
 public int getPrecio() {
 	return precio;
@@ -31,12 +31,13 @@ public Jardin getJardin() {
 public void setJardin(Jardin jardin) {
 	this.jardin = jardin;
 }
-public String getSegundamano() {
+public boolean isSegundamano() {
 	return segundamano;
 }
-public void setSegundamano(String segundamano) {
+public void setSegundamano(boolean segundamano) {
 	this.segundamano = segundamano;
 }
+
 public int getMetros() {
 	return metros;
 }
@@ -47,5 +48,13 @@ public void setMetros(int metros) {
 public int metrosTotales() {
 	return this.metros+= habitaciones.metrosCuadrados+jardin.metrosCuadrados;
 }
-
+	public int calcularIVA() {
+		if (segundamano == true) {
+			this.precio = ((this.precio * 5)/100) + this.precio;
+		}
+		else if (segundamano == false) {
+			this.precio = ((this.precio * 10)/100) + this.precio;
+		}
+		return this.precio;
+	}
 }
