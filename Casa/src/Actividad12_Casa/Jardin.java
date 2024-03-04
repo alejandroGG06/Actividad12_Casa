@@ -22,7 +22,7 @@ public class Jardin {
 
 	@Override
 	public String toString() {
-		return "Jardin [metrosCuadrados=" + metrosCuadrados + ", numeroPlantas=" + numeroPlantas + "]";
+		return "metrosCuadrados=" + metrosCuadrados + ", numeroPlantas=" + numeroPlantas;
 	}
 	
 	

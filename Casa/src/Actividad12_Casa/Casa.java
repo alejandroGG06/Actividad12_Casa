@@ -1,10 +1,12 @@
 package Actividad12_Casa;
 
+import java.util.ArrayList;
+
 public class Casa {
 	int precio;
 
 	Direccion direccion;
-	Habitacion habitaciones;
+	ArrayList<Habitacion> habitaciones;
 	Jardin jardin;
 	boolean segundamano;
 	int metros;
@@ -25,11 +27,11 @@ public class Casa {
 		this.direccion = direccion;
 	}
 
-	public Habitacion getHabitaciones() {
+	public ArrayList<Habitacion> getHabitaciones() {
 		return habitaciones;
 	}
 
-	public void setHabitaciones(Habitacion habitaciones) {
+	public void setHabitaciones(ArrayList<Habitacion> habitaciones) {
 		this.habitaciones = habitaciones;
 	}
 
@@ -60,12 +62,17 @@ public class Casa {
 	
 	@Override
 	public String toString() {
-		return "Casa [precio= " + precio + ", direccion=" + direccion + ", habitaciones= " + habitaciones + ", jardin= "
-				+ jardin + ", segundamano= " + segundamano + ", metros= " + metros + "]";
+		return "Casa : precio = " + precio + "\n direccion : " + direccion + "\n habitaciones : " + habitaciones + "\n jardin : "
+				+ jardin + "\n segundamano = " + segundamano;
 	}
 
 	public int metrosTotales() {
-		return this.metros += habitaciones.metrosCuadrados + jardin.metrosCuadrados;
+		for(Habitacion habitacion : habitaciones) {
+			this.metros += habitacion.metrosCuadrados;
+		}
+		this.metros += jardin.metrosCuadrados;
+		setMetros(this.metros);
+		return getMetros();
 	}
 
 	public int casaMasIVA() {

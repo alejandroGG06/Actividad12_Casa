@@ -31,8 +31,8 @@ public class Habitacion {
 
 	@Override
 	public String toString() {
-		return "Habitacion [nombre=" + nombre + ", metrosCuadrados=" + metrosCuadrados + ", tipoHabitacion="
-				+ tipoHabitacion + "]";
+		return "Habitacion : nombre = " + nombre + ", metrosCuadrados=" + metrosCuadrados + ", tipoHabitacion="
+				+ tipoHabitacion;
 	}
 	
 	
